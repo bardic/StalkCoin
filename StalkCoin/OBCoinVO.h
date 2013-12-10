@@ -12,10 +12,15 @@
  * ----------------------------------------------------------------------------
  */
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
-@interface OBAppDelegate : NSObject <NSApplicationDelegate, NSXMLParserDelegate, NSMenuDelegate, NSWindowDelegate>
-@property (strong) NSStatusItem* item;
-@property (strong) IBOutlet NSPanel* panel;
 
+@interface OBCoinVO : NSObject
+
+@property (strong) NSString *coinName;
+@property (strong) NSString *coinValue;
+@property (strong) NSString *coinPreviousValue;
+
+-(OBCoinVO *)initWithCoinName:(NSString *)coinName andCoinValue:(NSString *)coinValue;
+-(NSMutableAttributedString *)toString;
 @end

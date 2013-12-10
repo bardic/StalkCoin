@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B8383BAEE34B1A1497C5E4D /* OBCoinVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B838E76AF376670891DFCEF /* OBCoinVO.m */; };
 		557089FE1853901100EF3B00 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557089FD1853901100EF3B00 /* Cocoa.framework */; };
 		55708A081853901100EF3B00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55708A061853901100EF3B00 /* InfoPlist.strings */; };
 		55708A0A1853901100EF3B00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55708A091853901100EF3B00 /* main.m */; };
 		55708A0E1853901100EF3B00 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 55708A0C1853901100EF3B00 /* Credits.rtf */; };
 		55708A111853901100EF3B00 /* OBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55708A101853901100EF3B00 /* OBAppDelegate.m */; };
-		55708A141853901100EF3B00 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55708A121853901100EF3B00 /* MainMenu.xib */; };
 		55708A161853901100EF3B00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55708A151853901100EF3B00 /* Images.xcassets */; };
 		55708A1D1853901100EF3B00 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55708A1C1853901100EF3B00 /* XCTest.framework */; };
 		55708A1E1853901100EF3B00 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557089FD1853901100EF3B00 /* Cocoa.framework */; };
 		55708A261853901100EF3B00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55708A241853901100EF3B00 /* InfoPlist.strings */; };
 		55708A281853901100EF3B00 /* StalkCoinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55708A271853901100EF3B00 /* StalkCoinTests.m */; };
+		55708A401853B14800EF3B00 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55708A3A1853B14800EF3B00 /* CJSONDeserializer.m */; };
+		55708A411853B14800EF3B00 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55708A3C1853B14800EF3B00 /* CJSONSerializer.m */; };
+		55708A421853B14800EF3B00 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55708A3F1853B14800EF3B00 /* NSDictionary_JSONExtensions.m */; };
+		55708A4E1853DA5D00EF3B00 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55708A4C1853DA5D00EF3B00 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B83809B9E54DF1F3BE141AE /* OBCoinVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCoinVO.h; sourceTree = "<group>"; };
+		4B838E76AF376670891DFCEF /* OBCoinVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBCoinVO.m; sourceTree = "<group>"; };
 		557089FA1853901100EF3B00 /* StalkCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StalkCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557089FD1853901100EF3B00 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		55708A001853901100EF3B00 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -43,13 +49,20 @@
 		55708A0D1853901100EF3B00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		55708A0F1853901100EF3B00 /* OBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OBAppDelegate.h; sourceTree = "<group>"; };
 		55708A101853901100EF3B00 /* OBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OBAppDelegate.m; sourceTree = "<group>"; };
-		55708A131853901100EF3B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		55708A151853901100EF3B00 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		55708A1B1853901100EF3B00 /* StalkCoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StalkCoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55708A1C1853901100EF3B00 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		55708A231853901100EF3B00 /* StalkCoinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StalkCoinTests-Info.plist"; sourceTree = "<group>"; };
 		55708A251853901100EF3B00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55708A271853901100EF3B00 /* StalkCoinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StalkCoinTests.m; sourceTree = "<group>"; };
+		55708A391853B14800EF3B00 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		55708A3A1853B14800EF3B00 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		55708A3B1853B14800EF3B00 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		55708A3C1853B14800EF3B00 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		55708A3D1853B14800EF3B00 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		55708A3E1853B14800EF3B00 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		55708A3F1853B14800EF3B00 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		55708A4D1853DA5D00EF3B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = StalkCoin/Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +89,7 @@
 		557089F11853901100EF3B00 = {
 			isa = PBXGroup;
 			children = (
+				55708A4C1853DA5D00EF3B00 /* MainMenu.xib */,
 				55708A031853901100EF3B00 /* StalkCoin */,
 				55708A211853901100EF3B00 /* StalkCoinTests */,
 				557089FC1853901100EF3B00 /* Frameworks */,
@@ -115,11 +129,13 @@
 		55708A031853901100EF3B00 /* StalkCoin */ = {
 			isa = PBXGroup;
 			children = (
+				55708A381853B13500EF3B00 /* thirdparty */,
 				55708A0F1853901100EF3B00 /* OBAppDelegate.h */,
 				55708A101853901100EF3B00 /* OBAppDelegate.m */,
-				55708A121853901100EF3B00 /* MainMenu.xib */,
 				55708A151853901100EF3B00 /* Images.xcassets */,
 				55708A041853901100EF3B00 /* Supporting Files */,
+				4B838E76AF376670891DFCEF /* OBCoinVO.m */,
+				4B83809B9E54DF1F3BE141AE /* OBCoinVO.h */,
 			);
 			path = StalkCoin;
 			sourceTree = "<group>";
@@ -152,6 +168,20 @@
 				55708A241853901100EF3B00 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55708A381853B13500EF3B00 /* thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				55708A391853B14800EF3B00 /* CJSONDeserializer.h */,
+				55708A3A1853B14800EF3B00 /* CJSONDeserializer.m */,
+				55708A3B1853B14800EF3B00 /* CJSONSerializer.h */,
+				55708A3C1853B14800EF3B00 /* CJSONSerializer.m */,
+				55708A3D1853B14800EF3B00 /* JSONRepresentation.h */,
+				55708A3E1853B14800EF3B00 /* NSDictionary_JSONExtensions.h */,
+				55708A3F1853B14800EF3B00 /* NSDictionary_JSONExtensions.m */,
+			);
+			name = thirdparty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +264,7 @@
 				55708A081853901100EF3B00 /* InfoPlist.strings in Resources */,
 				55708A161853901100EF3B00 /* Images.xcassets in Resources */,
 				55708A0E1853901100EF3B00 /* Credits.rtf in Resources */,
-				55708A141853901100EF3B00 /* MainMenu.xib in Resources */,
+				55708A4E1853DA5D00EF3B00 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +285,10 @@
 			files = (
 				55708A0A1853901100EF3B00 /* main.m in Sources */,
 				55708A111853901100EF3B00 /* OBAppDelegate.m in Sources */,
+				55708A411853B14800EF3B00 /* CJSONSerializer.m in Sources */,
+				55708A401853B14800EF3B00 /* CJSONDeserializer.m in Sources */,
+				55708A421853B14800EF3B00 /* NSDictionary_JSONExtensions.m in Sources */,
+				4B8383BAEE34B1A1497C5E4D /* OBCoinVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,20 +327,20 @@
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		55708A121853901100EF3B00 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55708A131853901100EF3B00 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 		55708A241853901100EF3B00 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				55708A251853901100EF3B00 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		55708A4C1853DA5D00EF3B00 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55708A4D1853DA5D00EF3B00 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -465,6 +499,7 @@
 				55708A2D1853901100EF3B00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55708A2E1853901100EF3B00 /* Build configuration list for PBXNativeTarget "StalkCoinTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +508,7 @@
 				55708A301853901100EF3B00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
