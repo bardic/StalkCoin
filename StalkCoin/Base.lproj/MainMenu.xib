@@ -661,11 +661,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXe-y1-m0W">
-                        <rect key="frame" x="2" y="12" width="360" height="256"/>
+                        <rect key="frame" x="11" y="7" width="342" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="mini" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="IJK-5d-LRf">
+                        <textFieldCell key="cell" controlSize="mini" selectable="YES" sendsActionOnEndEditing="YES" drawsBackground="YES" id="IJK-5d-LRf">
                             <font key="font" metaFont="system"/>
                             <string key="title">StalkCoin v 0.1
+
+An opensource ticker for OSX. Reports LTC and BTC prices from BTC-E.
 
 If you find this app useful please consider donating:
 
@@ -674,10 +676,10 @@ Litecoin: LVFwvucM5mTdFKxfgfQbMEqaC7rE3tncEM
 
 Have a feature request? Email be at bardic.knowledge@gmail.com
 
-Source: https://github.com/bardic
+Source: https://github.com/bardic/StalkCoin
 Home page: http://openbracket.ca/stalkcoin/</string>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </textFieldCell>
                     </textField>
                 </subviews>

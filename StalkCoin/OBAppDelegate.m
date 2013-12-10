@@ -51,7 +51,7 @@
     [urlEndPoints setObject:@"https://btc-e.com/api/2/btc_usd/ticker" forKey:@"BTC"];
     
     [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(changeCoin) userInfo:nil repeats:YES]; //Update every 10 seconds
-    [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(updateCoin) userInfo:nil repeats:YES]; //Update every 10 seconds
+    [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(updateCoin) userInfo:nil repeats:YES]; //Update every 10 seconds
 
     [self initPrices];
 }
