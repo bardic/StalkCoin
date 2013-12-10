@@ -62,7 +62,7 @@
 		55708A3D1853B14800EF3B00 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		55708A3E1853B14800EF3B00 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
 		55708A3F1853B14800EF3B00 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
-		55708A4D1853DA5D00EF3B00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = StalkCoin/Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		559717311857BEDB004A7E53 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,7 +338,7 @@
 		55708A4C1853DA5D00EF3B00 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				55708A4D1853DA5D00EF3B00 /* Base */,
+				559717311857BEDB004A7E53 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -422,6 +422,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StalkCoin/StalkCoin-Prefix.pch";
 				INFOPLIST_FILE = "StalkCoin/StalkCoin-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -435,6 +436,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StalkCoin/StalkCoin-Prefix.pch";
 				INFOPLIST_FILE = "StalkCoin/StalkCoin-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
