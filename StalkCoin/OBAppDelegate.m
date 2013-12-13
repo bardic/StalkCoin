@@ -50,8 +50,8 @@
     [urlEndPoints setObject:@"https://btc-e.com/api/2/ltc_usd/ticker" forKey:@"LTC"];
     [urlEndPoints setObject:@"https://btc-e.com/api/2/btc_usd/ticker" forKey:@"BTC"];
     
-    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(changeCoin) userInfo:nil repeats:YES]; //Update every 10 seconds
-    [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(updateCoin) userInfo:nil repeats:YES]; //Update every 10 seconds
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(changeCoin) userInfo:nil repeats:YES]; //Update every 10 seconds
+    [NSTimer scheduledTimerWithTimeInterval:35 target:self selector:@selector(updateCoin) userInfo:nil repeats:YES]; //Update every 35 seconds
 
     [self initPrices];
 }
@@ -78,40 +78,33 @@
 }
 
 -(void)changeCoin{
-    NSLog(@"Change Coin");
     [_item setTitle:[(OBCoinVO *)[coinArray objectAtIndex:coin_index] toString]];
     coin_index++;
     if(coin_index >= [coinTypes count]){
         coin_index = 0;
     }
-
 }
 
 -(void)updateCoin{
-    NSLog(@"Update Coin");
     for(OBCoinVO *coinVO in coinArray){
         coinVO.coinValue = [self parse:[self requestCoinForIndex:coinVO.coinName]];
     }
 }
 
 -(void)onAbout:(id)sender{
-    NSLog(@"About Page");
     _panel.delegate = self;
     [NSApp runModalForWindow:_panel];
 }
 
 -(void)onUpdate{
-    NSLog(@"Force update");
     [self updateCoin];
 }
 
 -(void)onQuit{
-    NSLog(@"Kill App");
     [[NSApplication sharedApplication] terminate:nil];
 }
 
 - (void)windowWillClose:(NSNotification *)notification {
-    NSLog(@"Close popup window");
     [NSApp stopModal];
 
 }
