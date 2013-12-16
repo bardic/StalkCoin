@@ -16,6 +16,6 @@
 
 @interface OBAppDelegate : NSObject <NSApplicationDelegate, NSXMLParserDelegate, NSMenuDelegate, NSWindowDelegate>
 @property (strong) NSStatusItem* item;
-@property (strong) IBOutlet NSPanel* panel;
+
 
 @end

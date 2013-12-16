@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		52CBCA9D185BC1110030BB41 /* OBAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CBCA95185BC1110030BB41 /* OBAPIService.m */; };
 		52CBCA9E185BC1110030BB41 /* OBCoinVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CBCA98185BC1110030BB41 /* OBCoinVO.m */; };
-		52CBCA9F185BC1110030BB41 /* OBExchangeBTCEVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CBCA9A185BC1110030BB41 /* OBExchangeBTCEVO.m */; };
-		52CBCAA0185BC1110030BB41 /* OBExchangeVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CBCA9C185BC1110030BB41 /* OBExchangeVO.m */; };
+		52F63B64185BCB6200721B84 /* OBAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F63B62185BCB6200721B84 /* OBAboutWindowController.m */; };
+		52F63B65185BCB6200721B84 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F63B63185BCB6200721B84 /* AboutView.xib */; };
+		52F63B6A185BCC1F00721B84 /* OBExchangePreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F63B68185BCC1F00721B84 /* OBExchangePreferencesWindowController.m */; };
+		52F63B6B185BCC1F00721B84 /* ExchangePreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F63B69185BCC1F00721B84 /* ExchangePreferencesView.xib */; };
 		557089FE1853901100EF3B00 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557089FD1853901100EF3B00 /* Cocoa.framework */; };
 		55708A081853901100EF3B00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55708A061853901100EF3B00 /* InfoPlist.strings */; };
 		55708A0A1853901100EF3B00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55708A091853901100EF3B00 /* main.m */; };
@@ -22,6 +24,12 @@
 		55708A261853901100EF3B00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55708A241853901100EF3B00 /* InfoPlist.strings */; };
 		55708A281853901100EF3B00 /* StalkCoinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55708A271853901100EF3B00 /* StalkCoinTests.m */; };
 		55708A4E1853DA5D00EF3B00 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55708A4C1853DA5D00EF3B00 /* MainMenu.xib */; };
+		AE1060644F08A32EC7A43584 /* OBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE106A30B5A09A22A1AE3FD6 /* OBModel.m */; };
+		AE1060EC5A6C0A323A1FA168 /* OBMtGoxService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE106971F1B28D3DDD53496D /* OBMtGoxService.m */; };
+		AE10610DD2E69525B36CE425 /* OBDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = AE10647EE510C4C4816FA132 /* OBDefines.m */; };
+		AE1065D35A0BE460BC27D78D /* OBBTCEService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE106618C15A857A5A4CCABF /* OBBTCEService.m */; };
+		AE1068AE3215C13AE76CBF90 /* OBBitFinexService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1065BEC53B528D380F5115 /* OBBitFinexService.m */; };
+		AE106BA9318FCA4E3471D26B /* OBCryptsyService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE106E37C3EEE48AE6278B2D /* OBCryptsyService.m */; };
 		DAD919EE43A14E6C811DA9F7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3A896A80D9444A93DC85A1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,10 +50,12 @@
 		52CBCA95185BC1110030BB41 /* OBAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBAPIService.m; sourceTree = "<group>"; };
 		52CBCA97185BC1110030BB41 /* OBCoinVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCoinVO.h; sourceTree = "<group>"; };
 		52CBCA98185BC1110030BB41 /* OBCoinVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBCoinVO.m; sourceTree = "<group>"; };
-		52CBCA99185BC1110030BB41 /* OBExchangeBTCEVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBExchangeBTCEVO.h; sourceTree = "<group>"; };
-		52CBCA9A185BC1110030BB41 /* OBExchangeBTCEVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBExchangeBTCEVO.m; sourceTree = "<group>"; };
-		52CBCA9B185BC1110030BB41 /* OBExchangeVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBExchangeVO.h; sourceTree = "<group>"; };
-		52CBCA9C185BC1110030BB41 /* OBExchangeVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBExchangeVO.m; sourceTree = "<group>"; };
+		52F63B61185BCB6200721B84 /* OBAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBAboutWindowController.h; sourceTree = "<group>"; };
+		52F63B62185BCB6200721B84 /* OBAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBAboutWindowController.m; sourceTree = "<group>"; };
+		52F63B63185BCB6200721B84 /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+		52F63B67185BCC1F00721B84 /* OBExchangePreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBExchangePreferencesWindowController.h; sourceTree = "<group>"; };
+		52F63B68185BCC1F00721B84 /* OBExchangePreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBExchangePreferencesWindowController.m; sourceTree = "<group>"; };
+		52F63B69185BCC1F00721B84 /* ExchangePreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangePreferencesView.xib; sourceTree = "<group>"; };
 		557089FA1853901100EF3B00 /* StalkCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StalkCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557089FD1853901100EF3B00 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		55708A001853901100EF3B00 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -65,6 +75,19 @@
 		55708A251853901100EF3B00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55708A271853901100EF3B00 /* StalkCoinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StalkCoinTests.m; sourceTree = "<group>"; };
 		559717311857BEDB004A7E53 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AE1061414AA37403652A9A42 /* OBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBModel.h; sourceTree = "<group>"; };
+		AE10617FEEC715D3457FF1C5 /* OBXExchangeServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBXExchangeServiceProtocol.h; sourceTree = "<group>"; };
+		AE10647EE510C4C4816FA132 /* OBDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBDefines.m; sourceTree = "<group>"; };
+		AE1064D8D8B42EA54424C7A5 /* OBBTCEService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBBTCEService.h; sourceTree = "<group>"; };
+		AE1065BEC53B528D380F5115 /* OBBitFinexService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBBitFinexService.m; sourceTree = "<group>"; };
+		AE106618C15A857A5A4CCABF /* OBBTCEService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBBTCEService.m; sourceTree = "<group>"; };
+		AE10675DBD96AEA166E8594C /* OBDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBDefines.h; sourceTree = "<group>"; };
+		AE10693F356E70BBD623464E /* OBMtGoxService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBMtGoxService.h; sourceTree = "<group>"; };
+		AE106971F1B28D3DDD53496D /* OBMtGoxService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBMtGoxService.m; sourceTree = "<group>"; };
+		AE106A30B5A09A22A1AE3FD6 /* OBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBModel.m; sourceTree = "<group>"; };
+		AE106BBC169336A8B7050890 /* OBBitFinexService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBBitFinexService.h; sourceTree = "<group>"; };
+		AE106D7D21BACCA0514323CB /* OBCryptsyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCryptsyService.h; sourceTree = "<group>"; };
+		AE106E37C3EEE48AE6278B2D /* OBCryptsyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBCryptsyService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +117,15 @@
 			children = (
 				52CBCA94185BC1110030BB41 /* OBAPIService.h */,
 				52CBCA95185BC1110030BB41 /* OBAPIService.m */,
+				AE106618C15A857A5A4CCABF /* OBBTCEService.m */,
+				AE1064D8D8B42EA54424C7A5 /* OBBTCEService.h */,
+				AE10617FEEC715D3457FF1C5 /* OBXExchangeServiceProtocol.h */,
+				AE106971F1B28D3DDD53496D /* OBMtGoxService.m */,
+				AE10693F356E70BBD623464E /* OBMtGoxService.h */,
+				AE106E37C3EEE48AE6278B2D /* OBCryptsyService.m */,
+				AE106D7D21BACCA0514323CB /* OBCryptsyService.h */,
+				AE1065BEC53B528D380F5115 /* OBBitFinexService.m */,
+				AE106BBC169336A8B7050890 /* OBBitFinexService.h */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -103,12 +135,27 @@
 			children = (
 				52CBCA97185BC1110030BB41 /* OBCoinVO.h */,
 				52CBCA98185BC1110030BB41 /* OBCoinVO.m */,
-				52CBCA99185BC1110030BB41 /* OBExchangeBTCEVO.h */,
-				52CBCA9A185BC1110030BB41 /* OBExchangeBTCEVO.m */,
-				52CBCA9B185BC1110030BB41 /* OBExchangeVO.h */,
-				52CBCA9C185BC1110030BB41 /* OBExchangeVO.m */,
 			);
 			path = vo;
+			sourceTree = "<group>";
+		};
+		52F63B5F185BCB4100721B84 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				52F63B60185BCB4500721B84 /* about */,
+				AE106266343CABC87FC9CF8D /* exchangepreferences */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		52F63B60185BCB4500721B84 /* about */ = {
+			isa = PBXGroup;
+			children = (
+				52F63B61185BCB6200721B84 /* OBAboutWindowController.h */,
+				52F63B62185BCB6200721B84 /* OBAboutWindowController.m */,
+				52F63B63185BCB6200721B84 /* AboutView.xib */,
+			);
+			name = about;
 			sourceTree = "<group>";
 		};
 		557089F11853901100EF3B00 = {
@@ -156,12 +203,17 @@
 		55708A031853901100EF3B00 /* StalkCoin */ = {
 			isa = PBXGroup;
 			children = (
+				52F63B5F185BCB4100721B84 /* view */,
 				52CBCA93185BC1110030BB41 /* service */,
 				52CBCA96185BC1110030BB41 /* vo */,
 				55708A0F1853901100EF3B00 /* OBAppDelegate.h */,
 				55708A101853901100EF3B00 /* OBAppDelegate.m */,
 				55708A151853901100EF3B00 /* Images.xcassets */,
 				55708A041853901100EF3B00 /* Supporting Files */,
+				AE10647EE510C4C4816FA132 /* OBDefines.m */,
+				AE10675DBD96AEA166E8594C /* OBDefines.h */,
+				AE106A30B5A09A22A1AE3FD6 /* OBModel.m */,
+				AE1061414AA37403652A9A42 /* OBModel.h */,
 			);
 			path = StalkCoin;
 			sourceTree = "<group>";
@@ -194,6 +246,16 @@
 				55708A241853901100EF3B00 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE106266343CABC87FC9CF8D /* exchangepreferences */ = {
+			isa = PBXGroup;
+			children = (
+				52F63B67185BCC1F00721B84 /* OBExchangePreferencesWindowController.h */,
+				52F63B68185BCC1F00721B84 /* OBExchangePreferencesWindowController.m */,
+				52F63B69185BCC1F00721B84 /* ExchangePreferencesView.xib */,
+			);
+			name = exchangepreferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,9 +337,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F63B65185BCB6200721B84 /* AboutView.xib in Resources */,
 				55708A081853901100EF3B00 /* InfoPlist.strings in Resources */,
 				55708A161853901100EF3B00 /* Images.xcassets in Resources */,
 				55708A0E1853901100EF3B00 /* Credits.rtf in Resources */,
+				52F63B6B185BCC1F00721B84 /* ExchangePreferencesView.xib in Resources */,
 				55708A4E1853DA5D00EF3B00 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,12 +394,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52CBCA9F185BC1110030BB41 /* OBExchangeBTCEVO.m in Sources */,
 				55708A0A1853901100EF3B00 /* main.m in Sources */,
 				55708A111853901100EF3B00 /* OBAppDelegate.m in Sources */,
 				52CBCA9E185BC1110030BB41 /* OBCoinVO.m in Sources */,
-				52CBCAA0185BC1110030BB41 /* OBExchangeVO.m in Sources */,
+				52F63B6A185BCC1F00721B84 /* OBExchangePreferencesWindowController.m in Sources */,
+				52F63B64185BCB6200721B84 /* OBAboutWindowController.m in Sources */,
 				52CBCA9D185BC1110030BB41 /* OBAPIService.m in Sources */,
+				AE1065D35A0BE460BC27D78D /* OBBTCEService.m in Sources */,
+				AE10610DD2E69525B36CE425 /* OBDefines.m in Sources */,
+				AE1060644F08A32EC7A43584 /* OBModel.m in Sources */,
+				AE1060EC5A6C0A323A1FA168 /* OBMtGoxService.m in Sources */,
+				AE106BA9318FCA4E3471D26B /* OBCryptsyService.m in Sources */,
+				AE1068AE3215C13AE76CBF90 /* OBBitFinexService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,8 +540,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StalkCoin/StalkCoin-Prefix.pch";
 				INFOPLIST_FILE = "StalkCoin/StalkCoin-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -485,8 +556,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StalkCoin/StalkCoin-Prefix.pch";
 				INFOPLIST_FILE = "StalkCoin/StalkCoin-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

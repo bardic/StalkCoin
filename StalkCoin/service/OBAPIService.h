@@ -5,16 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-
-//Coins
-extern NSString * const LTC;
-extern NSString * const BTC;
-extern NSString * const FTC;
-
-//Exchanges
-extern NSString * const BTCE;
-
 @interface OBAPIService : NSObject
 
-
+-(void)getPricesForExchange:(int)exchange andCoins:(NSString *)coins;
 @end

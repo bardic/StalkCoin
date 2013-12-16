@@ -13,6 +13,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "OBDefines.h"
 
 
 @interface OBCoinVO : NSObject
@@ -20,7 +21,8 @@
 @property (strong) NSString *coinName;
 @property (strong) NSString *coinValue;
 @property (strong) NSString *coinPreviousValue;
+@property (nonatomic) Exchanges coinExchange;
 
--(OBCoinVO *)initWithCoinName:(NSString *)coinName andCoinValue:(NSString *)coinValue;
+-(OBCoinVO *)initWithCoinName:(NSString *)coinName andExchange:(Exchanges)exchange andCoinValue:(NSString *)coinValue;
 -(NSMutableAttributedString *)toString;
 @end

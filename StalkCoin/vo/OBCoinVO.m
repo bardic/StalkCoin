@@ -38,11 +38,12 @@ static NSString* DOWN_ARROW = @"\u2193";
 }
 
 
-- (OBCoinVO *)initWithCoinName:(NSString *)coinName andCoinValue:(NSString *)coinValue {
+-(OBCoinVO *)initWithCoinName:(NSString *)coinName andExchange:(Exchanges)exchange andCoinValue:(NSString *)coinValue{
     self = [super init];
     if (self) {
         _coinPreviousValue = @"0";
         _coinName = coinName;
+        _coinExchange = exchange;
         _coinValue = coinValue;
     }
 

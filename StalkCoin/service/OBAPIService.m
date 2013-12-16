@@ -4,33 +4,38 @@
 //
 
 #import "OBAPIService.h"
-#import "OBExchangeVO.h"
-
-//Coins
-NSString * const LTC = @"LTC";
-NSString * const BTC = @"BTC";
-NSString * const FTC = @"FTC";
-
-//Exchangeds
-NSString * const BTCE = @"BTCE";
-
-
+#import "OBDefines.h"
+#import "OBBTCEService.h"
+#import "OBMtGoxService.h"
+#import "OBCryptsyService.h"
+#import "OBBitFinexService.h"
 
 @implementation OBAPIService {
-    NSMutableDictionary *endPoints;
-}
-
--(id)init{
-    NSMutableDictionary *btceEndPointDict = [NSMutableDictionary new];
-    [btceEndPointDict insertValue:@"https://btc-e.com/api/2/ltc_usd/ticker" inPropertyWithKey:LTC];
-    [btceEndPointDict insertValue:@"https://btc-e.com/api/2/btc_usd/ticker" inPropertyWithKey:BTC];
-
-    [endPoints insertValue:[OBExchangeVO voWithExchangeName:BTCE coinEndPoints:btceEndPointDict] inPropertyWithKey:BTCE];
-
-    return self;
-}
-
--(void)callAPI{
 
 }
+
+- (void)getPricesForExchange:(int)exchange andCoins:(NSString *)coins {
+    NSObject<OBXExchangeServiceProtocol> *service;
+    switch(exchange){
+        case BTCE:
+            service = [[OBBTCEService alloc] init];
+            break;
+        case MTGOX:
+            service = [[OBMtGoxService alloc] init];
+            break;
+        case CRYPTSY:
+            service = [[OBCryptsyService alloc] init];
+            break;
+        case BITFINEX:
+            service = [[OBBitFinexService alloc] init];
+            break;
+        default:
+            NSLog(@"Opps");
+        break;
+
+    }
+
+    [service getPricesForCoins:@[LTC, BTC]];
+}
+
 @end

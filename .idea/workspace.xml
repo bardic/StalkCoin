@@ -2,24 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60d2b5fd-8193-46f0-9d7c-28534a3d74e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBAPIService.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBAPIService.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/vo/OBExchangeBTCEVO.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/vo/OBExchangeBTCEVO.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/vo/OBExchangeVO.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/vo/OBExchangeVO.m" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/CJSONDeserializer.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/CJSONDeserializer.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/CJSONSerializer.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/CJSONSerializer.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/JSONRepresentation.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/NSDictionary_JSONExtensions.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/NSDictionary_JSONExtensions.m" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/StalkCoin/OBCoinVO.h" afterPath="$PROJECT_DIR$/StalkCoin/vo/OBCoinVO.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/StalkCoin/OBCoinVO.m" afterPath="$PROJECT_DIR$/StalkCoin/vo/OBCoinVO.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/AboutView.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/ExchangePreferencesView.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/OBAboutWindowController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/OBAboutWindowController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBBTCEService.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBBTCEService.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBBitFinexService.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBBitFinexService.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBCryptsyService.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBCryptsyService.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/OBDefines.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/OBDefines.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/OBExchangePreferencesWindowController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/OBExchangePreferencesWindowController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/OBModel.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/OBModel.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBMtGoxService.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBMtGoxService.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StalkCoin/service/OBXExchangeServiceProtocol.h" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/vo/OBExchangeBTCEVO.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/vo/OBExchangeBTCEVO.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/vo/OBExchangeVO.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StalkCoin/vo/OBExchangeVO.m" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StalkCoin.xcworkspace/xcuserdata/tgillis.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/StalkCoin.xcworkspace/xcuserdata/tgillis.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/en.lproj/MainMenu.xib" afterPath="$PROJECT_DIR$/en.lproj/MainMenu.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StalkCoin/service/OBAPIService.h" afterPath="$PROJECT_DIR$/StalkCoin/service/OBAPIService.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StalkCoin/service/OBAPIService.m" afterPath="$PROJECT_DIR$/StalkCoin/service/OBAPIService.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StalkCoin/OBAppDelegate.h" afterPath="$PROJECT_DIR$/StalkCoin/OBAppDelegate.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StalkCoin/OBAppDelegate.m" afterPath="$PROJECT_DIR$/StalkCoin/OBAppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StalkCoin/vo/OBCoinVO.h" afterPath="$PROJECT_DIR$/StalkCoin/vo/OBCoinVO.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StalkCoin/vo/OBCoinVO.m" afterPath="$PROJECT_DIR$/StalkCoin/vo/OBCoinVO.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StalkCoin.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/StalkCoin.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/xcode.xml" afterPath="$PROJECT_DIR$/.idea/xcode.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StalkCoin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,29 +57,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Podfile" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Podfile">
+      <file leaf-file-name="OBCryptsyService.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBCryptsyService.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="418">
-              <folding />
+            <state line="18" column="130" selection-start="300" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+              <folding>
+                <element signature="e#108#136#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OBAppDelegate.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.m">
+      <file leaf-file-name="OBMtGoxService.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBMtGoxService.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="2657" selection-end="2657" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1785">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OBAppDelegate.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="4" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="405">
-              <folding />
+            <state line="16" column="49" selection-start="337" selection-end="337" vertical-scroll-proportion="0.26490065" vertical-offset="0" max-vertical-offset="906">
+              <folding>
+                <element signature="e#108#134#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,18 +97,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h" />
-        <option value="$PROJECT_DIR$/StalkCoin/OBCoinVO.h" />
-        <option value="$PROJECT_DIR$/StalkCoin/OBAppDelegate.h" />
-        <option value="$PROJECT_DIR$/StalkCoin/OBCoinVO.m" />
+        <option value="$PROJECT_DIR$/StalkCoin/OBDefines.m" />
+        <option value="$PROJECT_DIR$/StalkCoin/service/OBBitFinexService.h" />
+        <option value="$PROJECT_DIR$/StalkCoin/service/OBCryptsyService.h" />
+        <option value="$PROJECT_DIR$/StalkCoin/service/OBMtGoxService.h" />
+        <option value="$PROJECT_DIR$/StalkCoin/OBExchangePreferencesWindowController.m" />
+        <option value="$PROJECT_DIR$/StalkCoin/OBExchangePreferencesWindowController.h" />
+        <option value="$PROJECT_DIR$/StalkCoin/vo/OBCoinVO.h" />
+        <option value="$PROJECT_DIR$/StalkCoin/vo/OBCoinVO.m" />
         <option value="$PROJECT_DIR$/StalkCoin/OBAppDelegate.m" />
+        <option value="$PROJECT_DIR$/StalkCoin/service/OBAPIService.m" />
+        <option value="$PROJECT_DIR$/StalkCoin/service/OBAPIService.h" />
+        <option value="$PROJECT_DIR$/StalkCoin/service/OBXExchangeServiceProtocol.h" />
+        <option value="$PROJECT_DIR$/StalkCoin/service/OBBitFinexService.m" />
+        <option value="$PROJECT_DIR$/StalkCoin/service/OBBTCEService.m" />
+        <option value="$PROJECT_DIR$/StalkCoin/service/OBCryptsyService.m" />
+        <option value="$PROJECT_DIR$/StalkCoin/service/OBMtGoxService.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="1440" />
     <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="835" />
+    <option name="width" value="1680" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -107,7 +129,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -145,8 +167,112 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Pods" />
+              <option name="myItemId" value="StalkCoin" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StalkCoin" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StalkCoin" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StalkCoin" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vo" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StalkCoin" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StalkCoin" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exchangepreferences" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StalkCoin" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StalkCoin" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="about" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StalkCoin" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StalkCoin" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StalkCoin" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Products" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -155,12 +281,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="com.jetbrains.cidr.cocoapods.CocoaPodsConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="com.jetbrains.cidr.cocoapods.CocoaPodsConfigurable" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="StalkCoin" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.StalkCoin">
     <configuration default="false" name="StalkCoin" type="AppleRunConfiguration" factoryName="Application" temporary="true" SCHEME_NAME="StalkCoin" PROJECT_NAME="StalkCoin" TARGET_NAME="StalkCoin" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="StalkCoin" RUN_TARGET_NAME="StalkCoin" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -194,10 +320,10 @@
       <method />
     </configuration>
     <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Application.StalkCoin" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Pods-AFNetworking" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Pods-TouchJSON" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Pods" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Pods-AFNetworking" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Pods-TouchJSON" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Pods" />
+      <item index="3" class="java.lang.String" itemvalue="Application.StalkCoin" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -232,15 +358,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="835" extended-state="0" />
-    <editor active="false" />
+    <frame x="1440" y="22" width="1680" height="1028" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243607" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3211876" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1347918" sideWeight="0.6018893" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39811066" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2045866" sideWeight="0.6032389" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39676112" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -248,11 +375,29 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39676112" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3211876" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23923783" sideWeight="0.6032389" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -268,85 +413,125 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.m">
+    <entry file="file://$PROJECT_DIR$/StalkCoin/OBDefines.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="99" selection-start="2409" selection-end="2409" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1785">
+        <state line="20" column="11" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="405">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.h">
+    <entry file="file://$PROJECT_DIR$/StalkCoin/vo/OBCoinVO.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="405">
-          <folding />
+        <state line="25" column="118" selection-start="881" selection-end="999" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="495">
+          <folding>
+            <element signature="e#617#650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.h">
+    <entry file="file://$PROJECT_DIR$/StalkCoin/vo/OBCoinVO.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="163" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1830">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="405">
+        <state line="48" column="66" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0" vertical-offset="427" max-vertical-offset="1290">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1875">
+        <state line="109" column="60" selection-start="4348" selection-end="4348" vertical-scroll-proportion="0.0" vertical-offset="1267" max-vertical-offset="2595">
+          <folding>
+            <element signature="e#617#642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBAPIService.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="54" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.m">
+    <entry file="file://$PROJECT_DIR$/StalkCoin/OBExchangePreferencesWindowController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1875">
+        <state line="14" column="16" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="637" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.h">
+    <entry file="file://$PROJECT_DIR$/StalkCoin/OBExchangePreferencesWindowController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="405">
+        <state line="21" column="36" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h">
+    <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBAPIService.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="299" column="11" selection-start="21140" selection-end="21140" vertical-scroll-proportion="0.3328467" vertical-offset="4212" max-vertical-offset="6060" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="405">
+        <state line="17" column="24" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StalkCoin/OBAppDelegate.m">
+    <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBXExchangeServiceProtocol.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2657" selection-end="2657" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1785">
+        <state line="9" column="31" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Podfile">
+    <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBBitFinexService.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="715">
+        <state line="9" column="39" selection-start="222" selection-end="250" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBCryptsyService.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="66" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBBitFinexService.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="180" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBBTCEService.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="99" selection-start="346" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="795">
+          <folding>
+            <element signature="e#108#133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBMtGoxService.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="713">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBCryptsyService.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="130" selection-start="300" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding>
+            <element signature="e#108#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StalkCoin/service/OBMtGoxService.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="49" selection-start="337" selection-end="337" vertical-scroll-proportion="0.26490065" vertical-offset="0" max-vertical-offset="906">
+          <folding>
+            <element signature="e#108#134#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
