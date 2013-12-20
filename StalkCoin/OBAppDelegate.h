@@ -13,8 +13,9 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "OBExchangePrefDelegate.h"
 
-@interface OBAppDelegate : NSObject <NSApplicationDelegate, NSXMLParserDelegate, NSMenuDelegate, NSWindowDelegate>
+@interface OBAppDelegate : NSObject <NSApplicationDelegate, NSXMLParserDelegate, NSMenuDelegate, NSWindowDelegate, OBExchangePrefDelegate>
 @property (strong) NSStatusItem* item;
 
 

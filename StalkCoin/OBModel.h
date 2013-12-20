@@ -5,6 +5,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class OBModel;
+@class OBCoinVO;
 
-@interface OBModel : NSObject
+
+@interface OBModel : NSObject{
+    NSMutableArray *coins;
+}
+
+@property (nonatomic, strong) NSMutableArray *coins;
++(OBModel *)sharedSingleton;
+-(void)saveCoin:(OBCoinVO *)coin;
 @end

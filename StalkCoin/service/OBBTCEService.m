@@ -6,11 +6,14 @@
 #import "OBBTCEService.h"
 #import "CJSONDeserializer.h"
 #import "OBCoinVO.h"
-#import "OBDefines.h"
+#import "OBModel.h"
+#import "AFHTTPRequestOperation.h"
+#import "AFHTTPRequestOperationManager.h"
 
 
 @implementation OBBTCEService {
     NSMutableDictionary *endPointDict;
+    OBCoinVO * coinVO;
 }
 
 
@@ -18,31 +21,27 @@
     self = [super init];
     if (self) {
         endPointDict = [NSMutableDictionary new];
-        [endPointDict insertValue:@"https://btc-e.com/api/2/ltc_usd/ticker" inPropertyWithKey:LTC];
-        [endPointDict insertValue:@"https://btc-e.com/api/2/btc_usd/ticker" inPropertyWithKey:BTC];
+        [endPointDict setObject:@"https://btc-e.com/api/2/ltc_usd/ticker" forKey:LTC];
+        [endPointDict setObject:@"https://btc-e.com/api/2/btc_usd/ticker" forKey:BTC];
     }
 
     return self;
 }
 
--(void)getPriceForCoin:(NSString *)coin{
-    ///for(OBCoinVO *vo in coins){
-        //TODO: Stuff into model
-        NSString *tickerString = [self parse:[self requestCoinForIndex:coin]];
-    //}
+-(void)getPriceForCoin:(OBCoinVO *)coin{
+    //TODO: Stuff into model
+    [self requestCoinForIndex:coin];
 }
 
--(NSData *)requestCoinForIndex:(NSString *)type{
+-(void)requestCoinForIndex:(OBCoinVO *)coin{
     //TODO Change all this to use AFNetworking
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[endPointDict objectForKey:type]]];
-    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    return response;
-}
-
--(NSString *)parse:(NSData *)json{
-    NSDictionary* coin_details = [[CJSONDeserializer deserializer] deserialize:json error:nil];
-    id ticker = [coin_details objectForKey:@"ticker"];
-    id price = [ticker objectForKey:@"buy"];
-    return price;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:[endPointDict objectForKey:coin.coinName] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        id ticker = [responseObject objectForKey:@"ticker"];
+        id price = [ticker objectForKey:@"buy"];
+        coin.coinValue = price;
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 @end

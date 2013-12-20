@@ -30,6 +30,7 @@
 		AE1065D35A0BE460BC27D78D /* OBBTCEService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE106618C15A857A5A4CCABF /* OBBTCEService.m */; };
 		AE1068AE3215C13AE76CBF90 /* OBBitFinexService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1065BEC53B528D380F5115 /* OBBitFinexService.m */; };
 		AE106BA9318FCA4E3471D26B /* OBCryptsyService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE106E37C3EEE48AE6278B2D /* OBCryptsyService.m */; };
+		AE106FB7FA6479BAB7255315 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = AE106333568E894F83A5CA25 /* TODO */; };
 		DAD919EE43A14E6C811DA9F7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3A896A80D9444A93DC85A1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,8 @@
 		559717311857BEDB004A7E53 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		AE1061414AA37403652A9A42 /* OBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBModel.h; sourceTree = "<group>"; };
 		AE10617FEEC715D3457FF1C5 /* OBXExchangeServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBXExchangeServiceProtocol.h; sourceTree = "<group>"; };
+		AE10618A0D51D189CB0063FA /* OBExchangePrefDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBExchangePrefDelegate.h; sourceTree = "<group>"; };
+		AE106333568E894F83A5CA25 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		AE10647EE510C4C4816FA132 /* OBDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBDefines.m; sourceTree = "<group>"; };
 		AE1064D8D8B42EA54424C7A5 /* OBBTCEService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBBTCEService.h; sourceTree = "<group>"; };
 		AE1065BEC53B528D380F5115 /* OBBitFinexService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBBitFinexService.m; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 				AE10675DBD96AEA166E8594C /* OBDefines.h */,
 				AE106A30B5A09A22A1AE3FD6 /* OBModel.m */,
 				AE1061414AA37403652A9A42 /* OBModel.h */,
+				AE106333568E894F83A5CA25 /* TODO */,
 			);
 			path = StalkCoin;
 			sourceTree = "<group>";
@@ -254,6 +258,7 @@
 				52F63B67185BCC1F00721B84 /* OBExchangePreferencesWindowController.h */,
 				52F63B68185BCC1F00721B84 /* OBExchangePreferencesWindowController.m */,
 				52F63B69185BCC1F00721B84 /* ExchangePreferencesView.xib */,
+				AE10618A0D51D189CB0063FA /* OBExchangePrefDelegate.h */,
 			);
 			name = exchangepreferences;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				55708A0E1853901100EF3B00 /* Credits.rtf in Resources */,
 				52F63B6B185BCC1F00721B84 /* ExchangePreferencesView.xib in Resources */,
 				55708A4E1853DA5D00EF3B00 /* MainMenu.xib in Resources */,
+				AE106FB7FA6479BAB7255315 /* TODO in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

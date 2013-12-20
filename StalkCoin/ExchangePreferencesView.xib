@@ -11,7 +11,6 @@
                 <outlet property="bitfinex_ltc" destination="M2N-kp-rlz" id="ZFh-Hc-F4H"/>
                 <outlet property="btce_btc" destination="dgR-bq-GAd" id="h1I-bu-GYU"/>
                 <outlet property="btce_ltc" destination="88T-w0-Rh2" id="V2D-fb-3eQ"/>
-                <outlet property="cryptsy_btc" destination="ESt-n2-zSk" id="VIf-zx-mMK"/>
                 <outlet property="cryptsy_ltc" destination="iYx-gE-yFf" id="WVM-Wm-rfE"/>
                 <outlet property="cryptsy_qrk" destination="dJy-8f-7Ge" id="QRb-mn-u0N"/>
                 <outlet property="mtgox_btc" destination="n3k-Bf-vLR" id="VXG-6h-BEW"/>
@@ -95,16 +94,8 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VIw-jK-gCO">
-                        <rect key="frame" x="18" y="178" width="47" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="BTC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ESt-n2-zSk">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                    </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BIZ-zG-LOv">
-                        <rect key="frame" x="99" y="178" width="46" height="18"/>
+                        <rect key="frame" x="18" y="178" width="46" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="LTC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="iYx-gE-yFf">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -112,7 +103,7 @@
                         </buttonCell>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ors-4s-fBK">
-                        <rect key="frame" x="178" y="178" width="49" height="18"/>
+                        <rect key="frame" x="97" y="178" width="49" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="QRK" bezelStyle="regularSquare" imagePosition="left" inset="2" id="dJy-8f-7Ge">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -138,14 +129,25 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mBu-Gi-djW">
-                        <rect key="frame" x="240" y="13" width="69" height="32"/>
+                        <rect key="frame" x="203" y="13" width="69" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lHi-Yi-OlE">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="onSave:" target="-2" id="bWi-oE-bjl"/>
+                            <action selector="onSave:" target="-2" id="lzL-Tl-cbv"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQM-Oh-B1h">
+                        <rect key="frame" x="272" y="13" width="74" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7iR-Lj-yYS">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="onReset:" target="-2" id="Myu-wp-kYl"/>
                         </connections>
                     </button>
                 </subviews>

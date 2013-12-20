@@ -10,6 +10,8 @@ NSString * const BTC = @"BTC";
 NSString * const FTC = @"FTC";
 NSString * const QRK = @"QRK";
 
+int const MAX_CHAR_COUNT = 30;
+
 @implementation OBDefines {
 
 }

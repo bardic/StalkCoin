@@ -51,27 +51,49 @@ static NSString* DOWN_ARROW = @"\u2193";
 }
 
 - (NSMutableAttributedString *)toString {
+    NSLog(@"Exchange: %i Coin: %@",_coinExchange ,_coinName);
     NSColor * color = [NSColor blackColor];
     NSString * arrow = @"";
     if([_coinPreviousValue intValue] != 0 || [_coinPreviousValue intValue] == [_coinValue intValue]){
         if([self valueIncreased]){
             arrow = UP_ARROW;
-            color = [NSColor colorWithRed:0 green:160 blue:0 alpha:1];
+            //color = [NSColor colorWithRed:5 green:225 blue:0 alpha:1];
         }else{
             arrow = DOWN_ARROW;
-            color = [NSColor colorWithRed:160 green:0 blue:0 alpha:1];
+            //color = [NSColor colorWithRed:125 green:0 blue:0 alpha:1];
         }
     }
 
-    NSString * baseString = [NSString stringWithFormat:@"%@ %@: $%@",arrow,_coinName,_coinValue];
+    NSString *exchange = @"";
+    switch(_coinExchange){
+        case 0:
+            exchange = @"BTCE";
+            break;
+        case 1:
+            exchange = @"MTGOX";
+            break;
+        case 2:
+            exchange = @"CRYPTSY";
+            break;
+        case 3:
+             exchange = @"BITFINEX";
+            break;
+    }
 
-    if(baseString.length > 16){
-        baseString  = [baseString substringWithRange:NSMakeRange(0, 16)];
+    NSMutableString * baseString;
+    if(_coinValue){
+        baseString = [NSMutableString stringWithFormat:@"%@%@ - %@: $%@",arrow,exchange,_coinName,_coinValue];
+    }else{
+        baseString = [@"Loading..." mutableCopy];
+    }
+
+    if(baseString.length > MAX_CHAR_COUNT){
+        baseString  = [[baseString substringWithRange:NSMakeRange(0, MAX_CHAR_COUNT)] mutableCopy];
     }
 
     NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:baseString];
 
-    NSFont *font = [NSFont fontWithName:@"LucidaGrande-Bold" size:14.0];
+    NSFont *font = [NSFont fontWithName:@"LucidaGrande" size:10.0];
     [string addAttribute:NSFontAttributeName value:font range:NSMakeRange(0,string.length)];
     [string addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0,string.length)];
 

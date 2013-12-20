@@ -1,0 +1,7 @@
+ASYNC Service
+
+Insert all empty coins
+Start loading all coins
+Everyone 10 seconds loop through coins
+If price is nil display "Loading..."
+When info loading, replace price with real price.

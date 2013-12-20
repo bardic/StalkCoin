@@ -4,8 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OBCoinVO.h"
+
 
 @interface OBAPIService : NSObject
-
--(void)getPricesForExchange:(int)exchange andCoins:(NSString *)coins;
+-(void)getPriceForCoin:(OBCoinVO *)coin;
 @end

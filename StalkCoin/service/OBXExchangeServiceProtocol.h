@@ -5,7 +5,9 @@
 
 #import <Foundation/Foundation.h>
 
+@class OBCoinVO;
+
 @protocol OBXExchangeServiceProtocol <NSObject>
 
--(void)getPriceForCoin:(NSString *)coin;
+-(void)getPriceForCoin:(OBCoinVO *)coin;
 @end

@@ -25,6 +25,15 @@
 }
 
 -(void)awakeFromNib {
+    buttonArray = [NSMutableArray new];
+    [buttonArray addObject:btce_btc];
+    [buttonArray addObject:btce_ltc];
+    [buttonArray addObject:mtgox_btc];
+    //[buttonArray addObject:cryptsy_btc];
+    [buttonArray addObject:cryptsy_ltc];
+    [buttonArray addObject:cryptsy_qrk];
+    [buttonArray addObject:bitfinex_btc];
+    [buttonArray addObject:bitfinex_ltc];
     [self setCheckBoxes];
 }
 
@@ -34,7 +43,7 @@
     btce_ltc.state = [prefs boolForKey:@"BTCE_LTC"];
     btce_btc.state = [prefs boolForKey:@"BTCE_BTC"];
     mtgox_btc.state = [prefs boolForKey:@"MTGOX_BTC"];
-    cryptsy_btc.state = [prefs boolForKey:@"CRYPTSY_BTC"];
+    //cryptsy_btc.state = [prefs boolForKey:@"CRYPTSY_BTC"];
     cryptsy_ltc.state = [prefs boolForKey:@"CRYPTSY_LTC"];
     cryptsy_qrk.state = [prefs boolForKey:@"CRYPTSY_QRK"];
     bitfinex_btc.state = [prefs boolForKey:@"BITFINEX_BTC"];
@@ -48,6 +57,19 @@
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
+- (IBAction)onReset:(id)sender {
+    btce_btc.state = 0;
+    btce_ltc.state = 0;
+    mtgox_btc.state = 0;
+    //cryptsy_btc.state = 0;
+    cryptsy_ltc.state = 0;
+    cryptsy_qrk.state = 0;
+    bitfinex_btc.state = 0;
+    bitfinex_ltc.state = 0;
+
+    [self onSave:nil];
+}
+
 -(void)showExchangeWindow {
     self.window.delegate = self;
     [NSApp runModalForWindow:self.window];
@@ -57,18 +79,32 @@
     [NSApp stopModal];
 }
 
--(IBAction)onSave:(id)sender {
+-(IBAction)onSave:(id)sender{
     NSLog(@"Save prefs");
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    bool atLeastOneSaved = NO;
+    for(int i=0; i < [buttonArray count]; i++){
+        if(((NSButton *)[buttonArray objectAtIndex:i]).state){
+            atLeastOneSaved = YES;
+            break;
+        }
+    }
 
-    [prefs setBool:[self intToBool:btce_btc.state] forKey:@"BTCE_BTC"];
-    [prefs setBool:[self intToBool:btce_ltc.state] forKey:@"BTCE_LTC"];
-    [prefs setBool:[self intToBool:mtgox_btc.state] forKey:@"MTGOX_BTC"];
-    [prefs setBool:[self intToBool:cryptsy_btc.state] forKey:@"CRYPTSY_BTC"];
-    [prefs setBool:[self intToBool:cryptsy_ltc.state] forKey:@"CRYPTSY_LTC"];
-    [prefs setBool:[self intToBool:cryptsy_qrk.state] forKey:@"CRYPTSY_QRK"];
-    [prefs setBool:[self intToBool:bitfinex_btc.state] forKey:@"BITFINEX_BTC"];
-    [prefs setBool:[self intToBool:bitfinex_ltc.state] forKey:@"BITFINEX_LTC"];
+    if(atLeastOneSaved){
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+
+        [prefs setBool:[self intToBool:btce_btc.state] forKey:@"BTCE_BTC"];
+        [prefs setBool:[self intToBool:btce_ltc.state] forKey:@"BTCE_LTC"];
+        [prefs setBool:[self intToBool:mtgox_btc.state] forKey:@"MTGOX_BTC"];
+        //[prefs setBool:[self intToBool:cryptsy_btc.state] forKey:@"CRYPTSY_BTC"];
+        [prefs setBool:[self intToBool:cryptsy_ltc.state] forKey:@"CRYPTSY_LTC"];
+        [prefs setBool:[self intToBool:cryptsy_qrk.state] forKey:@"CRYPTSY_QRK"];
+        [prefs setBool:[self intToBool:bitfinex_btc.state] forKey:@"BITFINEX_BTC"];
+        [prefs setBool:[self intToBool:bitfinex_ltc.state] forKey:@"BITFINEX_LTC"];
+
+        [self.delegate preferencesSaved];
+    }else{
+        NSLog(@"You have to save at least one coin");
+    }
 }
 
 -(bool)intToBool:(NSInteger)integer{

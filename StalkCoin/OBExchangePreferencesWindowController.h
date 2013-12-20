@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "OBExchangePrefDelegate.h"
 
 @interface OBExchangePreferencesWindowController : NSWindowController<NSWindowDelegate>{
     IBOutlet NSButton *btce_ltc;
@@ -14,14 +15,20 @@
 
     IBOutlet NSButton *mtgox_btc;
 
-    IBOutlet NSButton *cryptsy_btc;
+    //IBOutlet NSButton *cryptsy_btc;
     IBOutlet NSButton *cryptsy_ltc;
     IBOutlet NSButton *cryptsy_qrk;
 
     IBOutlet NSButton *bitfinex_btc;
     IBOutlet NSButton *bitfinex_ltc;
+
+    NSMutableArray *buttonArray;
 }
 
+@property (weak) id<OBExchangePrefDelegate> delegate;
+
 -(IBAction)onSave:(id)sender;
+-(IBAction)onReset:(id)sender;
 -(void)showExchangeWindow;
+
 @end

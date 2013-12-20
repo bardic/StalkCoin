@@ -10,6 +10,7 @@ extern NSString * const LTC;
 extern NSString * const BTC;
 extern NSString * const FTC;
 extern NSString * const QRK;
+extern int const MAX_CHAR_COUNT;
 
 typedef enum{
     BTCE,

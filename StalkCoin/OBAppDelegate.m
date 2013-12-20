@@ -18,14 +18,16 @@
 #import "OBAboutWindowController.h"
 #import "OBExchangePreferencesWindowController.h"
 #import "OBAPIService.h"
+#import "OBModel.h"
 
 @implementation OBAppDelegate{
     int coin_index;
-    NSMutableDictionary *urlEndPoints;
-    NSArray * coinTypes;
-    
+
     NSMutableArray *coinArray;
     OBAPIService *service;
+
+    NSTimer * changeCoinTimer;
+    NSTimer * updateCoinTimer;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
@@ -34,8 +36,10 @@
     [_item setEnabled:YES];
     [_item setTarget:self];
 
+    coinArray = [[NSMutableArray alloc] init];
+    service = [[OBAPIService alloc] init];
+
     [self setup];
-    [self parse:[self requestCoinForIndex:@"LTC"]];
     [self createMenu];
 }
 
@@ -50,7 +54,7 @@
     [statusMenu addItem:settingsItem];
     [statusMenu addItem:quitItem];
     [_item setMenu:statusMenu];
-    [_item setTitle:@"Meow"];
+    [_item setTitle:@"Loading..."];
 }
 
 -(void)setup{
@@ -67,82 +71,64 @@
         [prefs setBool:NO forKey:@"BITFINEX_LTC"];
     }else{
         if([prefs boolForKey:@"BTCE_BTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:BTCE andCoinValue:0]];
+            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:BTCE andCoinValue:nil]];
         }
         
         if([prefs boolForKey:@"BTCE_LTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:BTCE andCoinValue:0]];
+            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:BTCE andCoinValue:nil]];
         }
         
         if([prefs boolForKey:@"MTGOX_BTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:MTGOX andCoinValue:0]];
+            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:MTGOX andCoinValue:nil]];
         }
         
         if([prefs boolForKey:@"CRYPTSY_BTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:CRYPTSY andCoinValue:0]];
+            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:CRYPTSY andCoinValue:nil]];
         }
         
         if([prefs boolForKey:@"CRYPTSY_LTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:CRYPTSY andCoinValue:0]];
+            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:CRYPTSY andCoinValue:nil]];
         }
         
         if([prefs boolForKey:@"CRYPTSY_QRK"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:QRK andExchange:CRYPTSY andCoinValue:0]];
+            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:QRK andExchange:CRYPTSY andCoinValue:nil]];
         }
         
         
         if([prefs boolForKey:@"BITFINEX_BTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:BITFINEX andCoinValue:0]];
+            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:BITFINEX andCoinValue:nil]];
         }
         
         if([prefs boolForKey:@"BITFINEX_LTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:BITFINEX andCoinValue:0]];
+            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:BITFINEX andCoinValue:nil]];
         }
     }
 
-    [self getInitialPrices];
+    [OBModel sharedSingleton].coins = coinArray;
+
+    if(!changeCoinTimer)
+        changeCoinTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(changeCoin) userInfo:nil repeats:YES]; //Update every 5 seconds
+
+    if(!updateCoinTimer)
+        updateCoinTimer = [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(updateCoinPrices) userInfo:nil repeats:YES]; //Update every 30 seconds
+
+    [self updateCoinPrices];
 }
 
--(void)getInitialPrices{
+-(void)updateCoinPrices{
     //TODO Figure out best way to store settings and how to retrieve
-    //service get
+    NSLog(@"Coin Arr Len: %i", (int)[coinArray count]);
     for(OBCoinVO *coin in coinArray){
-        [service getPricesForExchange:coin.coinExchange andCoins:coin.coinName];
+        [service getPriceForCoin:coin];
     }
-}
-
-- (void)initPrices {
-    for(NSString*type in coinTypes){
-        //[coinArray addObject:[[OBCoinVO alloc] initWithCoinName:type andCoinValue: [self parse:[self requestCoinForIndex:type]]]];
-    }
-//
-    [self changeCoin];
-}
-
--(NSData *)requestCoinForIndex:(NSString *)type{
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[urlEndPoints objectForKey:type]]];
-    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    return response;
-}
-
--(NSString *)parse:(NSData *)json{
-    NSDictionary* coin_details = [[CJSONDeserializer deserializer] deserialize:json error:nil];
-    id ticker = [coin_details objectForKey:@"ticker"];
-    id price = [ticker objectForKey:@"buy"];
-    return price;
 }
 
 -(void)changeCoin{
-    [_item setTitle:[(OBCoinVO *)[coinArray objectAtIndex:coin_index] toString]];
+    OBCoinVO *coin = (OBCoinVO *)[[OBModel sharedSingleton].coins objectAtIndex:coin_index];
+    [_item setTitle:[coin toString]];
     coin_index++;
-    if(coin_index >= [coinTypes count]){
+    if(coin_index >= [[OBModel sharedSingleton].coins count]){
         coin_index = 0;
-    }
-}
-
--(void)updateCoin{
-    for(OBCoinVO *coinVO in coinArray){
-        coinVO.coinValue = [self parse:[self requestCoinForIndex:coinVO.coinName]];
     }
 }
 
@@ -153,11 +139,12 @@
 
 -(void)onSettings:(id)sender{
     OBExchangePreferencesWindowController *exchangePreferencesWindowController= [[OBExchangePreferencesWindowController alloc] initWithWindowNibName:@"ExchangePreferencesView"];
+    exchangePreferencesWindowController.delegate = self;
     [exchangePreferencesWindowController showExchangeWindow];
 }
 
--(void)onUpdate{
-    [self updateCoin];
+- (void)preferencesSaved {
+    [self setup];
 }
 
 -(void)onQuit{
