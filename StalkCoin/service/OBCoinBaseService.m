@@ -12,14 +12,13 @@
  * ----------------------------------------------------------------------------
  */
 
-#import <AFNetworking/AFHTTPRequestOperation.h>
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
-#import "OBCryptsyService.h"
-#import "OBDefines.h"
+#import "OBCoinBaseService.h"
 #import "OBCoinVO.h"
 
 
-@implementation OBCryptsyService {
+@implementation OBCoinBaseService {
+
     NSMutableDictionary *endPointDict;
 }
 
@@ -27,8 +26,7 @@
     self = [super init];
     if (self) {
         endPointDict = [NSMutableDictionary new];
-        [endPointDict setObject:@"http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=3" forKey:LTC];
-        [endPointDict setObject:@"http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=71" forKey:QRK]; //This is really QRK. Jsut testing crap
+        [endPointDict setObject:@"https://coinbase.com/api/v1/prices/sell" forKey:BTC];
     }
 
     return self;
@@ -43,13 +41,12 @@
     //TODO Change all this to use AFNetworking
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:[endPointDict objectForKey:coin.coinName] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        id ticker = [responseObject objectForKey:@"return"];
-        id price = [ticker objectForKey:@"markets"];
-        id price1 = [price objectForKey:coin.coinName];
-        id price2 = [price1 objectForKey:@"lasttradeprice"];
-        coin.coinValue = [NSString stringWithFormat:@"%@",price2];
+        id ticker = [responseObject objectForKey:@"subtotal"];
+        id price = [ticker objectForKey:@"amount"];
+        coin.coinValue = [NSString stringWithFormat:@"%@",price];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
 }
+
 @end

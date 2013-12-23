@@ -1,5 +1,5 @@
 /*
- * StalkCoin v 0.1
+ * StalkCoin v 0.2
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42+1):
  * <bardic.knowledge@gmail.com> wrote this file. As long as you retain this notice you
@@ -14,15 +14,10 @@
 #import "OBCoinVO.h"
 
 
-@implementation OBCoinVO {
-@private
-    NSString *_coinValue;
-}
+@implementation OBCoinVO
 
 static NSString* UP_ARROW = @"\u2191";
 static NSString* DOWN_ARROW = @"\u2193";
-
-@synthesize coinValue = _coinValue;
 
 - (BOOL)valueIncreased {
     if([_coinValue intValue] > [_coinPreviousValue intValue]){
@@ -38,19 +33,20 @@ static NSString* DOWN_ARROW = @"\u2193";
 }
 
 
--(OBCoinVO *)initWithCoinName:(NSString *)coinName andExchange:(Exchanges)exchange andCoinValue:(NSString *)coinValue{
+- (OBCoinVO *)initWithCoinName:(NSString *)coinName andExchange:(Exchanges)exchange andCoinValue:(NSString *)coinValue andCurrency:(NSString *)coinCurrency {
     self = [super init];
     if (self) {
         _coinPreviousValue = @"0";
         _coinName = coinName;
         _coinExchange = exchange;
-        _coinValue = coinValue;
+        _coinValue = [NSString stringWithFormat:@"%@", coinValue];
+        _coinCurrency = coinCurrency;
     }
 
     return self;
 }
 
-- (NSMutableAttributedString *)toString {
+- (NSMutableString *)toString {
     NSLog(@"Exchange: %i Coin: %@",_coinExchange ,_coinName);
     NSColor * color = [NSColor blackColor];
     NSString * arrow = @"";
@@ -66,38 +62,41 @@ static NSString* DOWN_ARROW = @"\u2193";
 
     NSString *exchange = @"";
     switch(_coinExchange){
-        case 0:
+        case BTCE:
             exchange = @"BTCE";
             break;
-        case 1:
+        case MTGOX:
             exchange = @"MTGOX";
             break;
-        case 2:
+        case CRYPTSY:
             exchange = @"CRYPTSY";
             break;
-        case 3:
+        case BITFINEX:
              exchange = @"BITFINEX";
+            break;
+        case COINBASE:
+            exchange = @"COINBASE";
             break;
     }
 
     NSMutableString * baseString;
     if(_coinValue){
-        baseString = [NSMutableString stringWithFormat:@"%@%@ - %@: $%@",arrow,exchange,_coinName,_coinValue];
+        if(_coinValue.length > MAX_CHAR_COUNT){
+            _coinValue  = [[_coinValue substringWithRange:NSMakeRange(0, MAX_CHAR_COUNT)] mutableCopy];
+        }
+
+        baseString = [NSMutableString stringWithFormat:@"%@%@ - %@: %@/%@",arrow,exchange,_coinName,_coinValue, _coinCurrency];
     }else{
         baseString = [@"Loading..." mutableCopy];
     }
 
-    if(baseString.length > MAX_CHAR_COUNT){
-        baseString  = [[baseString substringWithRange:NSMakeRange(0, MAX_CHAR_COUNT)] mutableCopy];
-    }
-
-    NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:baseString];
+    NSMutableAttributedString *coinString = [[NSMutableAttributedString alloc] initWithString:baseString];
 
     NSFont *font = [NSFont fontWithName:@"LucidaGrande" size:10.0];
-    [string addAttribute:NSFontAttributeName value:font range:NSMakeRange(0,string.length)];
-    [string addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0,string.length)];
+    [coinString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, coinString.length)];
+    [coinString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, coinString.length)];
 
-    return string;
+    return coinString;
 }
 
 @end

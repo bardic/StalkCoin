@@ -10,7 +10,9 @@
                 <outlet property="bitfinex_btc" destination="buA-aR-JPt" id="7mr-wZ-ROt"/>
                 <outlet property="bitfinex_ltc" destination="M2N-kp-rlz" id="ZFh-Hc-F4H"/>
                 <outlet property="btce_btc" destination="dgR-bq-GAd" id="h1I-bu-GYU"/>
+                <outlet property="btce_ftc" destination="1qF-zo-Nr7" id="1lg-nk-nvt"/>
                 <outlet property="btce_ltc" destination="88T-w0-Rh2" id="V2D-fb-3eQ"/>
+                <outlet property="coinbase_btc" destination="GUN-fr-esT" id="UDg-sy-xre"/>
                 <outlet property="cryptsy_ltc" destination="iYx-gE-yFf" id="WVM-Wm-rfE"/>
                 <outlet property="cryptsy_qrk" destination="dJy-8f-7Ge" id="QRb-mn-u0N"/>
                 <outlet property="mtgox_btc" destination="n3k-Bf-vLR" id="VXG-6h-BEW"/>
@@ -48,6 +50,14 @@
                         <rect key="frame" x="99" y="272" width="46" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="LTC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="88T-w0-Rh2">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-zo-Nr7">
+                        <rect key="frame" x="174" y="272" width="46" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="FTC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="bfr-Ud-lZ2">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -114,6 +124,23 @@
                         <rect key="frame" x="18" y="155" width="52" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bitfinex" id="DXG-YA-Uab">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GUN-fr-esT">
+                        <rect key="frame" x="18" y="92" width="47" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="BTC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Rt6-Gz-3ll">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcM-Wn-NQi">
+                        <rect key="frame" x="18" y="112" width="61" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CoinBase" id="CLj-af-mIQ">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

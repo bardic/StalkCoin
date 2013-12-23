@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B838AF0DD7AB192FCCD80A0 /* OBCoinBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B83864CFE9ED598E9F3012D /* OBCoinBaseService.m */; };
 		52CBCA9D185BC1110030BB41 /* OBAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CBCA95185BC1110030BB41 /* OBAPIService.m */; };
 		52CBCA9E185BC1110030BB41 /* OBCoinVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CBCA98185BC1110030BB41 /* OBCoinVO.m */; };
 		52F63B64185BCB6200721B84 /* OBAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F63B62185BCB6200721B84 /* OBAboutWindowController.m */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		2E35F19DFF6144F384909F5D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		3C3A896A80D9444A93DC85A1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B8380EB7DEAEC16CEEC20F9 /* OBCoinBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCoinBaseService.h; sourceTree = "<group>"; };
+		4B83864CFE9ED598E9F3012D /* OBCoinBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBCoinBaseService.m; sourceTree = "<group>"; };
 		52CBCA94185BC1110030BB41 /* OBAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBAPIService.h; sourceTree = "<group>"; };
 		52CBCA95185BC1110030BB41 /* OBAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBAPIService.m; sourceTree = "<group>"; };
 		52CBCA97185BC1110030BB41 /* OBCoinVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCoinVO.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				AE106D7D21BACCA0514323CB /* OBCryptsyService.h */,
 				AE1065BEC53B528D380F5115 /* OBBitFinexService.m */,
 				AE106BBC169336A8B7050890 /* OBBitFinexService.h */,
+				4B83864CFE9ED598E9F3012D /* OBCoinBaseService.m */,
+				4B8380EB7DEAEC16CEEC20F9 /* OBCoinBaseService.h */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				AE1060EC5A6C0A323A1FA168 /* OBMtGoxService.m in Sources */,
 				AE106BA9318FCA4E3471D26B /* OBCryptsyService.m in Sources */,
 				AE1068AE3215C13AE76CBF90 /* OBBitFinexService.m in Sources */,
+				4B838AF0DD7AB192FCCD80A0 /* OBCoinBaseService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

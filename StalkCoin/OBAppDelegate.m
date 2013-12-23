@@ -1,5 +1,5 @@
 /*
- * StalkCoin v 0.1
+ * StalkCoin v 0.2
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42+1):
  * <bardic.knowledge@gmail.com> wrote this file. As long as you retain this notice you
@@ -21,13 +21,15 @@
 #import "OBModel.h"
 
 @implementation OBAppDelegate{
-    int coin_index;
+    NSUInteger coin_index;
 
     NSMutableArray *coinArray;
     OBAPIService *service;
 
     NSTimer * changeCoinTimer;
     NSTimer * updateCoinTimer;
+
+    bool resetPrefs;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
@@ -39,6 +41,8 @@
     coinArray = [[NSMutableArray alloc] init];
     service = [[OBAPIService alloc] init];
 
+    resetPrefs = NO;
+
     [self setup];
     [self createMenu];
 }
@@ -47,9 +51,9 @@
     NSMenu *statusMenu = [[NSMenu alloc] initWithTitle:@"StalkCoin"];
     NSMenuItem *aboutItem = [[NSMenuItem alloc] initWithTitle:@"About" action:@selector(onAbout:) keyEquivalent:@""];
     NSMenuItem *settingsItem = [[NSMenuItem alloc] initWithTitle:@"Settings" action:@selector(onSettings:) keyEquivalent:@""];
-    NSMenuItem *updateItem = [[NSMenuItem alloc] initWithTitle:@"Force Update" action:@selector(onUpdate) keyEquivalent:@""];
+    //NSMenuItem *updateItem = [[NSMenuItem alloc] initWithTitle:@"Force Update" action:@selector(onUpdate) keyEquivalent:@""];
     NSMenuItem *quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(onQuit) keyEquivalent:@""];
-    [statusMenu addItem:updateItem];
+    //[statusMenu addItem:updateItem];
     [statusMenu addItem:aboutItem];
     [statusMenu addItem:settingsItem];
     [statusMenu addItem:quitItem];
@@ -59,50 +63,61 @@
 
 -(void)setup{
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    if(![prefs objectForKey:@"created"]){
+    if(![prefs objectForKey:@"created"] || resetPrefs){
         [prefs setBool:YES forKey:@"created"];
         [prefs setBool:YES forKey:@"BTCE_BTC"];
         [prefs setBool:YES forKey:@"BTCE_LTC"];
+        [prefs setBool:YES forKey:@"BTCE_FTC"];
         [prefs setBool:NO forKey:@"MTGOX_BTC"];
         [prefs setBool:NO forKey:@"CRYPTSY_BTC"];
         [prefs setBool:NO forKey:@"CRYPTSY_LTC"];
         [prefs setBool:NO forKey:@"CRYPTSY_QRK"];
         [prefs setBool:NO forKey:@"BITFINEX_BTC"];
         [prefs setBool:NO forKey:@"BITFINEX_LTC"];
-    }else{
-        if([prefs boolForKey:@"BTCE_BTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:BTCE andCoinValue:nil]];
-        }
-        
-        if([prefs boolForKey:@"BTCE_LTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:BTCE andCoinValue:nil]];
-        }
-        
-        if([prefs boolForKey:@"MTGOX_BTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:MTGOX andCoinValue:nil]];
-        }
-        
-        if([prefs boolForKey:@"CRYPTSY_BTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:CRYPTSY andCoinValue:nil]];
-        }
-        
-        if([prefs boolForKey:@"CRYPTSY_LTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:CRYPTSY andCoinValue:nil]];
-        }
-        
-        if([prefs boolForKey:@"CRYPTSY_QRK"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:QRK andExchange:CRYPTSY andCoinValue:nil]];
-        }
-        
-        
-        if([prefs boolForKey:@"BITFINEX_BTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:BITFINEX andCoinValue:nil]];
-        }
-        
-        if([prefs boolForKey:@"BITFINEX_LTC"]){
-            [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:BITFINEX andCoinValue:nil]];
-        }
+        [prefs setBool:NO forKey:@"COINBASE_BTC"];
     }
+
+    if([prefs boolForKey:@"BTCE_BTC"]){
+        [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:BTCE andCoinValue:@"" andCurrency:@"USD" ]];
+    }
+
+    if([prefs boolForKey:@"BTCE_LTC"]){
+        [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:BTCE andCoinValue:@"" andCurrency:@"USD" ]];
+    }
+
+    if([prefs boolForKey:@"BTCE_FTC"]){
+        [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:FTC andExchange:BTCE andCoinValue:@"" andCurrency:@"BTC" ]];
+    }
+
+    if([prefs boolForKey:@"MTGOX_BTC"]){
+        [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:MTGOX andCoinValue:@"" andCurrency:@"USD" ]];
+    }
+
+    if([prefs boolForKey:@"CRYPTSY_BTC"]){
+        [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:CRYPTSY andCoinValue:@"" andCurrency:@"USD" ]];
+    }
+
+    if([prefs boolForKey:@"CRYPTSY_LTC"]){
+        [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:CRYPTSY andCoinValue:@"" andCurrency:@"USD" ]];
+    }
+
+    if([prefs boolForKey:@"CRYPTSY_QRK"]){
+        [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:QRK andExchange:CRYPTSY andCoinValue:@"" andCurrency:@"BTC" ]];
+    }
+
+
+    if([prefs boolForKey:@"BITFINEX_BTC"]){
+        [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:BITFINEX andCoinValue:@"" andCurrency:@"USD" ]];
+    }
+
+    if([prefs boolForKey:@"BITFINEX_LTC"]){
+        [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:BITFINEX andCoinValue:@"" andCurrency:@"USD" ]];
+    }
+
+    if([prefs boolForKey:@"COINBASE_BTC"]){
+        [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:COINBASE andCoinValue:@"" andCurrency:@"USD" ]];
+    }
+
 
     [OBModel sharedSingleton].coins = coinArray;
 
@@ -110,7 +125,7 @@
         changeCoinTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(changeCoin) userInfo:nil repeats:YES]; //Update every 5 seconds
 
     if(!updateCoinTimer)
-        updateCoinTimer = [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(updateCoinPrices) userInfo:nil repeats:YES]; //Update every 30 seconds
+        updateCoinTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateCoinPrices) userInfo:nil repeats:YES]; //Update every 60 seconds
 
     [self updateCoinPrices];
 }

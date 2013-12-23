@@ -1,5 +1,5 @@
 /*
- * StalkCoin v 0.1
+ * StalkCoin v 0.2
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42+1):
  * <bardic.knowledge@gmail.com> wrote this file. As long as you retain this notice you
@@ -19,10 +19,11 @@
 @interface OBCoinVO : NSObject
 
 @property (strong) NSString *coinName;
-@property (strong) NSString *coinValue;
+@property (strong, nonatomic) NSString *coinValue;
 @property (strong) NSString *coinPreviousValue;
+@property (strong) NSString *coinCurrency;
 @property (nonatomic) Exchanges coinExchange;
 
--(OBCoinVO *)initWithCoinName:(NSString *)coinName andExchange:(Exchanges)exchange andCoinValue:(NSString *)coinValue;
--(NSMutableAttributedString *)toString;
+- (OBCoinVO *)initWithCoinName:(NSString *)coinName andExchange:(Exchanges)exchange andCoinValue:(NSString *)coinValue andCurrency:(NSString *)coinCurrency;
+-(NSMutableString *)toString;
 @end

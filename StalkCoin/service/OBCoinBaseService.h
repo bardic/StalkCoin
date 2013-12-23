@@ -13,8 +13,8 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "OBXExchangeServiceProtocol.h"
 
-@protocol OBExchangePrefDelegate <NSObject>
 
--(void)preferencesSaved;
+@interface OBCoinBaseService : NSObject <OBXExchangeServiceProtocol>
 @end

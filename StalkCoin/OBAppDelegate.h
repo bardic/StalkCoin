@@ -1,5 +1,5 @@
 /*
- * StalkCoin v 0.1
+ * StalkCoin v 0.2
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42+1):
  * <bardic.knowledge@gmail.com> wrote this file. As long as you retain this notice you
