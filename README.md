@@ -17,5 +17,6 @@ StalkCoin is a simple OSX menu ticker for altcoins (BTC, LTC, FTC, QRK) that poo
  via Bitcoin and/or Litecoin:
 
  Bitcoin: 1GWGoT9r6wAgdERT7QogehPvaaUUEohcEQ
+ 
  Litecoin: LVFwvucM5mTdFKxfgfQbMEqaC7rE3tncEM
 
