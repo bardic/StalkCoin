@@ -21,6 +21,8 @@
 
     IBOutlet NSButton *bitfinex_btc;
     IBOutlet NSButton *bitfinex_ltc;
+    
+    IBOutlet NSButton *coinbase_btc;
 
     NSMutableArray *buttonArray;
 }

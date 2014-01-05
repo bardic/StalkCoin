@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
@@ -11,6 +11,7 @@
                 <outlet property="bitfinex_ltc" destination="M2N-kp-rlz" id="ZFh-Hc-F4H"/>
                 <outlet property="btce_btc" destination="dgR-bq-GAd" id="h1I-bu-GYU"/>
                 <outlet property="btce_ltc" destination="88T-w0-Rh2" id="V2D-fb-3eQ"/>
+                <outlet property="coinbase_btc" destination="aut-23-4FJ" id="2ug-DN-DDL"/>
                 <outlet property="cryptsy_ltc" destination="iYx-gE-yFf" id="WVM-Wm-rfE"/>
                 <outlet property="cryptsy_qrk" destination="dJy-8f-7Ge" id="QRb-mn-u0N"/>
                 <outlet property="mtgox_btc" destination="n3k-Bf-vLR" id="VXG-6h-BEW"/>
@@ -22,7 +23,7 @@
         <window title="Exchange Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="dmn-wD-Iev" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <rect key="contentRect" x="139" y="81" width="549" height="378"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <view key="contentView" id="s61-R8-75K">
                 <rect key="frame" x="0.0" y="0.0" width="549" height="378"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -56,6 +57,14 @@
                         <rect key="frame" x="18" y="135" width="47" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="BTC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="buA-aR-JPt">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aut-23-4FJ">
+                        <rect key="frame" x="18" y="92" width="47" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="BTC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Dqw-lc-utG">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -114,6 +123,15 @@
                         <rect key="frame" x="18" y="155" width="52" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bitfinex" id="DXG-YA-Uab">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ztl-gX-nOp">
+                        <rect key="frame" x="18" y="112" width="62" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Coinbase" id="lAB-SF-aip">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

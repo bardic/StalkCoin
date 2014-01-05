@@ -69,6 +69,7 @@
         [prefs setBool:NO forKey:@"CRYPTSY_QRK"];
         [prefs setBool:NO forKey:@"BITFINEX_BTC"];
         [prefs setBool:NO forKey:@"BITFINEX_LTC"];
+        [prefs setBool:NO forKey:@"COINBASE_BTC"];
     }else{
         if([prefs boolForKey:@"BTCE_BTC"]){
             [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:BTC andExchange:BTCE andCoinValue:nil]];
@@ -101,6 +102,11 @@
         
         if([prefs boolForKey:@"BITFINEX_LTC"]){
             [coinArray addObject:[[OBCoinVO alloc] initWithCoinName:LTC andExchange:BITFINEX andCoinValue:nil]];
+        }
+        
+        if([prefs boolForKey:@"COINBASE_BTC"]){
+            [coinArray addObject:[[OBCoinVO alloc]
+                initWithCoinName:BTC andExchange:COINBASE andCoinValue:nil]];
         }
     }
 

@@ -32,6 +32,7 @@
 		AE106BA9318FCA4E3471D26B /* OBCryptsyService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE106E37C3EEE48AE6278B2D /* OBCryptsyService.m */; };
 		AE106FB7FA6479BAB7255315 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = AE106333568E894F83A5CA25 /* TODO */; };
 		DAD919EE43A14E6C811DA9F7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3A896A80D9444A93DC85A1 /* libPods.a */; };
+		FC02F7E31878BD850078C5C2 /* OBCoinbaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = FC02F7E21878BD850078C5C2 /* OBCoinbaseService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		AE106BBC169336A8B7050890 /* OBBitFinexService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBBitFinexService.h; sourceTree = "<group>"; };
 		AE106D7D21BACCA0514323CB /* OBCryptsyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCryptsyService.h; sourceTree = "<group>"; };
 		AE106E37C3EEE48AE6278B2D /* OBCryptsyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBCryptsyService.m; sourceTree = "<group>"; };
+		FC02F7E11878BD850078C5C2 /* OBCoinbaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCoinbaseService.h; sourceTree = "<group>"; };
+		FC02F7E21878BD850078C5C2 /* OBCoinbaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBCoinbaseService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 		52CBCA93185BC1110030BB41 /* service */ = {
 			isa = PBXGroup;
 			children = (
+				FC02F7E11878BD850078C5C2 /* OBCoinbaseService.h */,
+				FC02F7E21878BD850078C5C2 /* OBCoinbaseService.m */,
 				52CBCA94185BC1110030BB41 /* OBAPIService.h */,
 				52CBCA95185BC1110030BB41 /* OBAPIService.m */,
 				AE106618C15A857A5A4CCABF /* OBBTCEService.m */,
@@ -400,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC02F7E31878BD850078C5C2 /* OBCoinbaseService.m in Sources */,
 				55708A0A1853901100EF3B00 /* main.m in Sources */,
 				55708A111853901100EF3B00 /* OBAppDelegate.m in Sources */,
 				52CBCA9E185BC1110030BB41 /* OBCoinVO.m in Sources */,
