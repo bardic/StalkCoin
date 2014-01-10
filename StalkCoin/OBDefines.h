@@ -16,7 +16,8 @@ typedef enum{
     BTCE,
     MTGOX,
     CRYPTSY,
-    BITFINEX
+    BITFINEX,
+    COINBASE
 }Exchanges;
 
 @interface OBDefines : NSObject

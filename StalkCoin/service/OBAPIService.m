@@ -9,6 +9,7 @@
 #import "OBMtGoxService.h"
 #import "OBCryptsyService.h"
 #import "OBBitFinexService.h"
+#import "OBCoinbaseService.h"
 #import "OBCoinVO.h"
 
 @implementation OBAPIService {
@@ -33,6 +34,10 @@
         case BITFINEX:
             NSLog(@"Ping Exchange: BITFINEX");
             service = [[OBBitFinexService alloc] init];
+            break;
+        case COINBASE:
+            NSLog(@"Ping Exchange: COINBASE");
+            service = [[OBCoinbaseService alloc] init];
             break;
         default:
             NSLog(@"Opps");

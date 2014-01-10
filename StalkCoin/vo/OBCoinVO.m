@@ -76,7 +76,10 @@ static NSString* DOWN_ARROW = @"\u2193";
             exchange = @"CRYPTSY";
             break;
         case 3:
-             exchange = @"BITFINEX";
+            exchange = @"BITFINEX";
+            break;
+        case 4:
+            exchange = @"COINBASE";
             break;
     }
 

@@ -34,6 +34,7 @@
     [buttonArray addObject:cryptsy_qrk];
     [buttonArray addObject:bitfinex_btc];
     [buttonArray addObject:bitfinex_ltc];
+    [buttonArray addObject:coinbase_btc];
     [self setCheckBoxes];
 }
 
@@ -48,6 +49,7 @@
     cryptsy_qrk.state = [prefs boolForKey:@"CRYPTSY_QRK"];
     bitfinex_btc.state = [prefs boolForKey:@"BITFINEX_BTC"];
     bitfinex_ltc.state = [prefs boolForKey:@"BITFINEX_LTC"];
+    coinbase_btc.state = [prefs boolForKey:@"COINBASE_BTC"];
 }
 
 - (void)windowDidLoad
@@ -66,6 +68,7 @@
     cryptsy_qrk.state = 0;
     bitfinex_btc.state = 0;
     bitfinex_ltc.state = 0;
+    coinbase_btc.state = 0;
 
     [self onSave:nil];
 }
@@ -100,6 +103,7 @@
         [prefs setBool:[self intToBool:cryptsy_qrk.state] forKey:@"CRYPTSY_QRK"];
         [prefs setBool:[self intToBool:bitfinex_btc.state] forKey:@"BITFINEX_BTC"];
         [prefs setBool:[self intToBool:bitfinex_ltc.state] forKey:@"BITFINEX_LTC"];
+        [prefs setBool:[self intToBool:coinbase_btc.state] forKey:@"COINBASE_BTC"];
 
         [self.delegate preferencesSaved];
     }else{
